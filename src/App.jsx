@@ -17,7 +17,7 @@ const Header = ({ currentPage, setCurrentPage, scrolled }) => {
           </span> */}
           <img
             src="/logo/CFFlogo.svg"
-            alt="NexusAgency Logo"
+            alt="Creative Folks Felix Logo"
             className="h-30 md:h-34 w-auto"
           />
 
@@ -624,7 +624,7 @@ const About = () => {
           <div>
             <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 2018, NexusAgency was built on a simple belief: marketing should be measurable, authentic, and profitable.
+              Founded in 2018, Creative Folks Felix was built on a simple belief: marketing should be measurable, authentic, and profitable.
             </p>
             <p className="text-gray-600 mb-4">
               We've grown from a small team of three to a powerhouse agency working with Fortune 500 brands and fast-growing startups alike.
@@ -803,9 +803,13 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-4 gap-12 mb-12">
         <div>
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
-            NexusAgency
-          </h3>
+          <div className="mb-4">
+            <img
+              src="/logo/CFFlogo.svg"
+              alt="Creative Folks Felix"
+              className="h-24 w-auto"
+            />
+          </div>
           <p className="text-gray-400 text-sm">
             Growth-first marketing agency helping brands scale profitably
           </p>
@@ -845,7 +849,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-        <p>© 2026 NexusAgency. All rights reserved.</p>
+        <p>© 2026 Creative Folks Felix. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
