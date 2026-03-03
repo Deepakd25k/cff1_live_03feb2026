@@ -18,7 +18,7 @@ const Header = ({ currentPage, setCurrentPage, scrolled }) => {
           <img
             src="/logo/CFFlogo.svg"
             alt="Creative Folks Felix Logo"
-            className="h-30 md:h-34 w-auto"
+            className="h-12 md:h-16 w-auto"
           />
 
         </button>
@@ -94,9 +94,9 @@ const Home = ({ setCurrentPage }) => {
             <div className="inline-block mb-4 px-4 py-2 bg-purple-100 rounded-full text-purple-700 text-sm font-medium">
               🚀 Trusted by 100+ Brands
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               We Turn Your Brand Into A
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Growth Machine</span>
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent block sm:inline mt-2 sm:mt-0"> Growth Machine</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Data-driven marketing strategies that deliver real results. From influencer campaigns to performance ads, we scale businesses with precision and creativity.
@@ -121,7 +121,7 @@ const Home = ({ setCurrentPage }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8"
           >
             {[
               { value: "200M+", label: "Impressions" },
@@ -129,9 +129,9 @@ const Home = ({ setCurrentPage }) => {
               { value: "98%", label: "Client Retention" },
               { value: "10+", label: "Industry Awards" }
             ].map((stat, idx) => (
-              <div key={idx} className="bg-white/80 backdrop-blur rounded-2xl p-6 shadow-lg">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">{stat.value}</div>
-                <div className="text-sm text-gray-600 mt-2">{stat.label}</div>
+              <div key={idx} className="bg-white/80 backdrop-blur rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-center items-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2 text-center">{stat.label}</div>
               </div>
             ))}
 
@@ -143,8 +143,8 @@ const Home = ({ setCurrentPage }) => {
       {/* Services Preview */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Expertise</h2>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Expertise</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Comprehensive marketing solutions tailored to your business goals</p>
           </div>
 
@@ -172,13 +172,13 @@ const Home = ({ setCurrentPage }) => {
               <motion.div
                 key={idx}
                 whileHover={{ y: -10 }}
-                className="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-gray-100"
+                className="group bg-gradient-to-br from-gray-50 to-white p-6 sm:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left"
                 onClick={() => setCurrentPage("services")}
               >
-                <div className={`text-${service.color}-600 mb-4`}>{service.icon}</div>
+                <div className={`text-${service.color}-600 mb-4 flex justify-center sm:justify-start w-full`}>{service.icon}</div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.desc}</p>
-                <div className="flex items-center text-purple-600 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center justify-center sm:justify-start text-purple-600 font-semibold group-hover:gap-3 transition-all">
                   Learn More <ChevronRight className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
@@ -191,10 +191,10 @@ const Home = ({ setCurrentPage }) => {
       <BrandCarousel />
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-16 sm:py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your Brand?</h2>
-          <p className="text-xl mb-8 opacity-90">Let's create a marketing strategy that delivers real, measurable results</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">Ready to Scale Your Brand?</h2>
+          <p className="text-lg sm:text-xl mb-8 opacity-90">Let's create a marketing strategy that delivers real, measurable results</p>
           <button
             onClick={() => setCurrentPage("contact")}
             className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all inline-flex items-center gap-2"
@@ -253,9 +253,9 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">Our Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Full-stack marketing solutions designed to accelerate your growth
           </p>
@@ -268,18 +268,18 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border border-gray-100"
+              className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 text-white">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 text-white shrink-0">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.desc}</p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 w-full text-left">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
-                    {feature}
+                  <li key={i} className="flex items-start gap-2 text-sm justify-center sm:justify-start">
+                    <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-1.5 shrink-0"></div>
+                    <span className="flex-1">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -299,11 +299,11 @@ const Work = () => {
       icon: "📊",
       industries: ["E-Commerce", "Food & Beverages", "Kids Toys", "Bottles & Tumblers", "Card & Party Games"],
       metrics: [
-        { label: "AOV Increase", value: "40%", description: "Through bundles & product recommendations" },
-        { label: "Returning Customer Rate", value: "30%", description: "Via cohort analysis & WhatsApp marketing" },
-        { label: "Ad Spend", value: "₹7 Cr+", description: "Managed across multiple channels" },
-        { label: "Revenue Generated", value: "₹30 Cr+", description: "Direct attributed revenue" },
-        { label: "Average ROAS", value: "4X", description: "Consistent across all campaigns" }
+        { label: "Total Ad Spend", value: "₹8 Cr", description: "Verified managed ad spend" },
+        { label: "Revenue Generated", value: "₹35 Cr+", description: "Direct attributed revenue" },
+        { label: "Average ROAS", value: "4X+", description: "Consistent across diverse campaigns" },
+        { label: "AOV Improvement", value: "35%", description: "Through intelligent bundling & cross-selling" },
+        { label: "CAC Reduction", value: "35%", description: "Via data-driven audience targeting" }
       ],
       strategies: [
         { title: "Bundle & Product Recommendations", desc: "Increased AOV by 40% through intelligent bundling" },
@@ -319,11 +319,9 @@ const Work = () => {
         { name: "Klaviyo", icon: "📧" }
       ],
       dashboards: [
-        "dashboard-1.png",
-        "dashboard-2.png",
-        "dashboard-3.png",
-        "dashboard-4.png",
-        "dashboard-5.png"
+        "/images/perf-1.png",
+        "/images/perf-2.png",
+        "/images/perf-3.png"
       ],
       trustFactors: [
         "Real-time performance tracking",
@@ -419,9 +417,9 @@ const Work = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Impact</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">Our Impact</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from real campaigns. See how we've transformed brands across diverse industries.
           </p>
@@ -437,11 +435,11 @@ const Work = () => {
             className="mb-24"
           >
             {/* Service Section Header Card */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 mb-12">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="text-6xl">{study.icon}</div>
+            <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg border border-gray-200 mb-8 sm:mb-12">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 md:gap-6 mb-8">
+                <div className="text-6xl shrink-0">{study.icon}</div>
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4">{study.title}</h2>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4">{study.title}</h2>
                   <p className="text-gray-600 text-lg">Delivered exceptional results across multiple verticals</p>
                 </div>
               </div>
@@ -460,27 +458,27 @@ const Work = () => {
             </div>
 
             {/* Key Metrics Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8 sm:mb-12">
               {study.metrics.map((metric, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+                  className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all flex flex-col justify-center text-center"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                     {metric.value}
                   </div>
-                  <div className="text-sm font-semibold text-gray-700 mb-1">{metric.label}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">{metric.label}</div>
                   <div className="text-xs text-gray-500">{metric.description}</div>
                 </motion.div>
               ))}
             </div>
 
             {/* Strategies */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 mb-12">
-              <h3 className="text-3xl font-bold mb-8">Our Strategies</h3>
+            <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg border border-gray-200 mb-8 sm:mb-12">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center sm:text-left">Our Strategies</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {study.strategies.map((strategy, i) => (
                   <motion.div
@@ -503,38 +501,49 @@ const Work = () => {
             </div>
 
             {/* Real Dashboard Results */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 mb-12">
-              <h3 className="text-3xl font-bold mb-8">Real Dashboard Results</h3>
-              <p className="text-gray-600 mb-8">Live performance metrics from our actual campaigns</p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {study.dashboards.map((dashboard, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3 + i * 0.05 }}
-                    className="relative group rounded-2xl overflow-hidden bg-gradient-to-br from-purple-200 via-blue-200 to-pink-200 aspect-square"
-                  >
-                    {/* Placeholder - Replace with actual dashboard images */}
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400">
-                      <div className="text-center">
-                        <div className="text-4xl mb-2">📊</div>
-                        <p className="text-white text-xs font-semibold">{dashboard}</p>
+            {study.dashboards && study.dashboards.length > 0 && (
+              <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg border border-gray-200 mb-8 sm:mb-12">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8 text-center sm:text-left">Verified Campaign Data</h3>
+                <p className="text-gray-600 mb-6 sm:mb-8 text-center sm:text-left">Real performance screenshots from our live client dashboards</p>
+                <div className={`grid grid-cols-1 ${study.dashboards.length === 3 ? 'lg:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-5'} gap-6`}>
+                  {study.dashboards.map((dashboard, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 + (i * 0.1) }}
+                      className="relative group rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-gray-50 hover:shadow-2xl transition-all duration-300"
+                    >
+                      {dashboard.includes('dashboard-') && !dashboard.includes('/images/') ? (
+                        <div className="w-full aspect-square flex items-center justify-center bg-gradient-to-br from-purple-100 to-blue-100">
+                          <div className="text-center text-gray-500">
+                            <span className="text-3xl mb-2 block">�</span>
+                            <span className="text-sm font-medium">Placeholder: {dashboard}</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <img
+                          src={dashboard}
+                          alt={`Performance Dashboard ${i + 1}`}
+                          className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      )}
+
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-white text-sm font-semibold">Verified Metric Snapshot</p>
                       </div>
-                    </div>
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
-                      <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Upload: {dashboard}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
+
 
             {/* Tools & Platforms */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 mb-12">
-              <h3 className="text-3xl font-bold mb-8">Tools & Platforms We Use</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div className="bg-white rounded-3xl p-6 md:p-12 shadow-lg border border-gray-200 mb-8 sm:mb-12">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center sm:text-left">Tools & Platforms We Use</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6">
                 {study.tools.map((tool, i) => (
                   <motion.div
                     key={i}
@@ -551,8 +560,8 @@ const Work = () => {
             </div>
 
             {/* Trust Factors */}
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white mb-12">
-              <h3 className="text-3xl font-bold mb-8">Why Brands Trust Us</h3>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-6 md:p-12 text-white mb-8 sm:mb-12">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center sm:text-left">Why Brands Trust Us</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {study.trustFactors.map((factor, i) => (
                   <motion.div
@@ -583,9 +592,9 @@ const Work = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="text-center bg-white rounded-3xl p-12 shadow-lg border border-gray-200"
+          className="text-center bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200"
         >
-          <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's create a custom marketing strategy that delivers measurable results for your business
           </p>
@@ -612,17 +621,17 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">About Us</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We're a team of marketers, creators, and strategists obsessed with driving growth
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 sm:mb-24 text-center md:text-left">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Our Mission</h2>
             <p className="text-gray-600 mb-4">
               Founded in 2018, Creative Folks Felix was built on a simple belief: marketing should be measurable, authentic, and profitable.
             </p>
@@ -645,8 +654,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Meet The Team</h2>
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Meet The Team</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, idx) => (
               <motion.div
@@ -695,9 +704,9 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Let's Talk Growth</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">Let's Talk Growth</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to take your marketing to the next level? We'd love to hear from you.
           </p>
@@ -707,9 +716,9 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-8 rounded-3xl shadow-xl"
+            className="bg-white p-6 md:p-8 rounded-3xl shadow-xl"
           >
-            <h2 className="text-3xl font-bold mb-6">Send us a message</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center sm:text-left">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
@@ -877,7 +886,7 @@ export default function App() {
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden overflow-y-auto">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} scrolled={scrolled} />
       <AnimatePresence mode="wait">
         <motion.div
